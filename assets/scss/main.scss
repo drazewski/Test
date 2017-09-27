@@ -12,4 +12,23 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: $white;
+  background-color: $main_bg;
+  background-image: url('../../img/body-background.png');
+  background-size: 100%;
+
+  main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../img/background.jpg');
+    background-size: 100%;
+
+    @include md{
+      min-height: initial;
+      width: 405px;
+      height: 694px;
+      margin: 30px auto;
+      border: 3px solid $light_blue;
+    }
+  }
 }

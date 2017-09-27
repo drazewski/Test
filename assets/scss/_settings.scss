@@ -1,30 +1,23 @@
 $white: #fff;
 $red: #e70f2d;
+$grey: #757575;
+$dark_blue: #013368;
+$light_blue: #2776c2;
+$main_bg: #014ca0;
 
-$sm: 693px;
-$xs: 480px;
+$md: 694px;
+$sm: 570px;
 
 @font-face {
     font-family: 'sofiapro';
-    src: url('assets/fonts/sofiaproblack-webfont');
-    font-weight: 900;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'sofiapro';
-    src: url('assets/fonts/sofiaproregular-webfont');
+    src: url('../fonts/sofiaproregular-webfont.woff2');
     font-weight: 400;
     font-style: normal;
 }
 
-$base-font-size: 16;
-
-@function calc-rem($size) {
-  $remSize: $size / $base-font-size;
-  @return $remSize * 1rem;
-}
-
-@function rem($size) {
-  $remSize: $size / $base-font-size;
-  @return $remSize * 1rem;
+@font-face {
+    font-family: 'sofiapro';
+    src: url('../fonts/sofiaproblack-webfont.woff2');
+    font-weight: 900;
+    font-style: normal;
 }

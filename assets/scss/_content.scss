@@ -1,3 +1,202 @@
-h2 {
-	font-size: 111px;
+.container{
+	width: 76.3%;
+	margin: 0 auto;
+	padding: 20px 0 10px;
+
+	@include md {
+		width: 71.5%;
+		padding-top: 23px;
+	}
+
+	.container-header, .container-footer{
+		text-align: center;
+
+		img{
+			max-width: 100%;
+		}
+	}
+
+	.container-form{
+		margin: 38px 0 200px;
+
+		@include sm{
+			margin-bottom: 272px;
+		}
+
+		@include md{
+			margin: 41px 0 72px;
+		}
+
+		h2{
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 30px;
+			text-align: center;
+			letter-spacing: 0.11em;
+    		line-height: 1.2;
+
+    		@include md{
+    			font-size: 24px;
+    			padding: 0 10px;
+    		}
+		}
+	}
+
+	.container-footer{
+		position: absolute;
+    	bottom: 12px;
+    	width: 47%;
+    	right: 26.5%;
+
+    	@include md{
+    		position: relative;
+		    bottom: inherit;
+		    right: inherit;
+		    width: 165px;
+		    margin: auto;
+    	}
+	}
+}
+
+form{
+
+	select, input{
+		text-align: center;
+		text-align-last: center;
+		color: $grey;
+		border: none;
+		box-shadow: 3px 3px 0px $dark_blue;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		@include md{
+			font-size: 12px;
+		}
+	}
+
+	.date-input{
+		display: flex;
+		margin-bottom: 1px;
+
+		input{
+			flex: 1;
+			max-width: calc(33% - 18px);
+			margin: 10px 10px 0;
+    		padding: 8px 0;
+
+    		@include md {
+    			max-width: calc(33% - 11px);
+    			margin: 10px 6px 0;
+    			padding: 9px 0px 9px 0px;
+    		}
+		}
+	}
+
+	.contact-input{
+		display: flex;
+		margin-bottom: 14px;
+
+		@include md {
+			margin-bottom: 28px;
+		}
+
+		input, select{
+			appearance: none;
+			flex: 1;
+			min-width: calc(50% - 18px);
+			margin: 10px;
+    		padding: 8px 0;
+    		text-align-last: center; 
+    		text-align: center;
+			-ms-text-align-last: center;
+			-moz-text-align-last: center; 
+			text-align-last: center !important;
+
+			@include sm{
+				min-width: initial;
+				width: calc(50% - 18px);
+			}
+
+    		@include md{
+    			margin: 10px 6px 0;
+    			padding: 9px 0;
+    			max-width: calc(50% - 12px);
+    		}
+		}
+	}
+
+	.checkbox-input{
+		text-align: center;
+		padding-right: 22px;
+		margin-bottom: 24px;
+
+		@include md {
+			margin-bottom: 27px;
+		}
+
+		input[type="checkbox"] {
+			border: none;
+			position: relative;
+			height: 14px;
+		    width: 14px;
+		    margin-right: 12px;
+		    background-color: $white;
+
+		    @include md{
+		    	margin-right: 16px;
+		    }
+
+		    &:after{
+		    	content: '';
+		    	position: absolute;
+		    	right: 0;
+		    	height: 14px;
+		    	width: 14px;
+		    	background-color: $white;
+		    }
+
+		    &:checked:after{
+		    	content: "\2714";
+		    }
+		}
+
+		span{
+			font-size: 8px;
+    		text-transform: uppercase;
+
+    		@include md{
+    			letter-spacing: 0.065em;
+    		}
+    	}
+
+    	.underline{
+    		color: $white;
+    		text-decoration: underline;
+    		
+		}
+	}
+
+	button{
+		display: block;
+		margin: auto;
+		background-color: $red;
+		text-transform: uppercase;
+		border: none;
+		font-weight: 900;
+		font-size: 18px;
+   		padding: 15px 32px;
+   		transition: 0.4s background-color;
+   		box-shadow: 3px 3px 0px $dark_blue;
+
+   		@include md {
+   			padding: 18px 34px 15px;
+    		letter-spacing: 0.08em;
+   		}
+
+   		&:hover{
+   			color: $red;
+   			background-color: $white;
+   		}
+	}
 }
